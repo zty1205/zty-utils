@@ -1,11 +1,17 @@
 {
   "name": "zty-utils",
   "version": "1.0.0",
-  "author": "zty1160051490@163.com",
-  "description": "",
-  "main": "zty_utils.js",
-  "keywords": [],
+  "author": "zty",
+  "email": "zty1160051490@163.com",
+  "description": "js utils",
+  "private": false,
+  "main": "lib/zty_utils.js",
+  "keywords": ["js", "utils", "rollup"],
   "license": "ISC",
+  "homepage": "https://github.com/zty1205/zty-utils",
+  "bugs": {
+    "url": "https://github.com/zty1205/zty-utils/issues" 
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zty1205/zty-utils"

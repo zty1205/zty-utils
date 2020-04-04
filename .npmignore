@@ -1,0 +1,13 @@
+# 忽略目录
+config/
+utils/
+node_modules/
+ 
+# 忽略指定文件
+.browserslistrc
+.editorconfig
+.eslintignore
+.eslintrc
+babel.config.js
+yarn.lock
+*.map

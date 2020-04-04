@@ -8,7 +8,7 @@ import {isDev, isWatch} from '../utils/index'
 
 const dev = isDev()
 const watch = isWatch()
-console.log('dev = ', dev)
+
 const plugins = [
 	resolve(),
 	commonjs(),
@@ -17,7 +17,22 @@ const plugins = [
 	}),
 
 ]
-if (!dev) plugins.push(terser())
+if (!dev) {
+	plugins.push(terser(
+		{
+			output: {
+				comments: function(node, comment) {
+					let text = comment.value;
+					let type = comment.type;
+					if (type == "comment2") {
+						// multiline comment
+						return /name|author|version/i.test(text);
+					}
+				}
+			}
+		}
+	))
+}
 if (watch) {
 	plugins.push(
 		serve({
