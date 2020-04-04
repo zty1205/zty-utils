@@ -1,0 +1,46 @@
+{
+  "name": "zty-utils",
+  "version": "1.0.0",
+  "author": "zty1160051490@163.com",
+  "description": "",
+  "main": "zty_utils.js",
+  "keywords": [],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zty1205/zty-utils"
+  },
+  "scripts": {
+    "umd:dev": "cross-env NODE_ENV=development FORMAT=umd rollup -c config/rollup.config.js",
+    "cjs:dev": "cross-env NODE_ENV=development FORMAT=cjs rollup -c config/rollup.config.js",
+    "esm:dev": "cross-env NODE_ENV=development FORMAT=esm rollup -c config/rollup.config.js",
+    "iife:dev": "cross-env NODE_ENV=development FORMAT=iife rollup -c config/rollup.config.js",
+    "umd": "cross-env NODE_ENV=production FORMAT=umd rollup -c config/rollup.config.js",
+    "cjs": "cross-env NODE_ENV=production FORMAT=cjs rollup -c config/rollup.config.js",
+    "esm": "cross-env NODE_ENV=production FORMAT=esm rollup -c config/rollup.config.js",
+    "iife": "cross-env NODE_ENV=production FORMAT=iife rollup -c config/rollup.config.js",
+    "watch": "cross-env FORMAT=umd WATCH=true rollup -c config/rollup.config.js",
+    "build": "npm run build && npm run dev",
+    "dev": "cross-env NODE_ENV=development npm run rollup-all",
+    "all": "npm run build && npm run dev"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "cross-env": "^7.0.2",
+    "rollup": "^2.3.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-browsersync": "^1.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-livereload": "^1.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "browserslist": "> 0.25%, not dead"
+}
