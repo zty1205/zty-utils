@@ -1,6 +1,7 @@
 # 忽略目录
 config/
 utils/
+src/
 node_modules/
  
 # 忽略指定文件
